@@ -38,3 +38,12 @@ jobs:
     - name: Test with pytest
       run: |
         pytest
+
+    - name: Check test status
+      if: always()
+      run: |
+        if [ ${{ job.status }} != 'success' ]; then
+          echo "Tests failed! Please fix the issues before merging."
+          exit 1
+        fi
+

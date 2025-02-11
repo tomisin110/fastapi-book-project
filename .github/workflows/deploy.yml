@@ -34,4 +34,8 @@ jobs:
           echo "$SSH_PRIVATE_KEY" > ~/.ssh/id_rsa
           chmod 600 ~/.ssh/id_rsa
           ssh-keyscan -H $SERVER_IP >> ~/.ssh/known_hosts
-          ssh $SERVER_USER@$SERVER_IP "cd fastapi-book-project/fastapi-book-project && git pull origin main && sudo systemctl restart fastapi-app"
+          ssh $SERVER_USER@$SERVER_IP "cd ~/fastapi-book-project && \
+            git pull origin main && \
+            source venv/bin/activate && \
+            pip install -r requirements.txt && \
+            sudo systemctl restart fastapi"  # Changed from fastapi-app to fastapi

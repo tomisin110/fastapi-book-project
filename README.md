@@ -79,6 +79,10 @@ uvicorn main:app
 - Swagger UI: http://localhost:8000/docs
 - ReDoc: http://localhost:8000/redoc
 
+## Deployed Application
+The API is deployed and accessible at: http://13.60.230.172/
+
+
 ## API Endpoints
 
 ### Books
@@ -132,9 +136,9 @@ The API includes proper error handling for:
 ## Contributing
 
 1. Fork the repository
-2. Create a feature branch (`git checkout -b feature/AmazingFeature`)
-3. Commit changes (`git commit -m 'Add AmazingFeature'`)
-4. Push to branch (`git push origin feature/AmazingFeature`)
+2. Create a feature branch (`git checkout -b feature/get-book-by-id`)
+3. Commit changes (`git commit -m "Implement GET /api/v1/books/{book_id} endpoint"`)
+4. Push to branch (`git push origin feature/get-book-by-id`)
 5. Open a Pull Request
 
 ## License
